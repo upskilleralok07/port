@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO-ALOK SHARMA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    
-    <style >
-        body{
-           
-            background-color:white;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 200px;
-        }
-      .navbar a {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO - ALOK SHARMA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 8px 25px;
+      border-radius: 50px;
+      width: fit-content;
+
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+
+    .navbar a {
       color: #fff;
       text-decoration: none;
       padding: 8px 18px;
@@ -21,130 +41,107 @@
       font-size: 15px;
       transition: 0.3s;
     }
-        .navbar {
-      background: #111;             /* black bar */
-      display: flex;                /* arrange items in a row */
-      align-items: center;          /* vertical center */
-      justify-content: center;      /* center all links + logo */
-      gap: 15px;                    /* space between items */
-      padding: 8px 25px;
-      border-radius: 50px;          /* pill shape */
-      width: fit-content;
 
-      position: fixed;              /* stick at top */
-      top: 20px;
+    .navbar a.active {
+      background: orange;
+      color: aliceblue;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      background: #333;
+    }
+
+    /* Intro Text */
+    .text1 {
+      position: absolute;
+      top: 120px;
       left: 50%;
+      text-align: center;
       transform: translateX(-50%);
       z-index: 1000;
+      font-size: xx-large;
     }
-        .navbar a.active{
-            background: orange;
-            color: aliceblue;
-            font-weight: bold;
-        }
-        .navbar a:hover{
-            background:#333
-            ;
-        }
-        .text1{
-           position: absolute;              
-                top: 120px;
-                left: 50%;
-                text-align:center;
-                transform: translateX(-50%);
-                z-index: 1000;
-                font-family: 'poppins',sans-serif;
-                font-size: xx-large;
 
-        }
-       .hero {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  margin-top: 550px;          /* spacing below text */
-}
+    /* Hero Image */
+    .hero {
+      display: flex;
+      justify-content: center;
+      margin-top: 350px;
+    }
 
-.hero img {
-  max-width: 100000px;          /* limit size (you can increase/decrease) */
-  width: 1000px;               /* keep natural width */
-  height: auto;              /* keep natural height */
-  object-fit: contain;
-         /* no cropping */
-}
-.hero-title {
-  display: flex;
-  justify-content: center;  /* centers horizontally */
-  gap: 15px;                /* spacing between the two h1s */
-  margin-top: 40px;
-  font-size: 3rem;
-  .hero-title .role {
-  font-size: 3rem;
-  color:orange;      /* dark grey/black for role */
-}
-}
-  .hero-title .role {
-  font-size: 3rem;
-  color:orange;      /* dark grey/black for role */
-}.full-img img {
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;    /* this keeps aspect ratio and fills screen */
-}
- body {
-  margin: 0;
-  padding: 0;
-  height: 100%;     /* ensure body takes full screen */
-}
+    .hero img {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
 
-.full-screen {
-  width: 100vw;     /* full width of screen */
-  height: 100vh;    /* full height of screen */
-  overflow: hidden; /* hides extra parts */
-}
+    /* Hero Title */
+    .hero-title {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
+      font-size: 3rem;
+    }
 
-.full-screen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* makes it fill screen without distortion */
-}
+    .hero-title .role {
+      color: orange;
+    }
 
-    </style>
+    /* Full Screen Background (optional use) */
+    .full-screen {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
 
+    .full-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Project Images */
+    .projects {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 50px 0;
+    }
+
+    .projects img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
+
 <body>
-       <div>
-        <div class="navbar"  >
-            <a href="#"class="active">HOME</a>
-            <a href="#">ABOUT ME</a>
-            <a href="#">PROJECTS</a>
-            <a href="#">CONTACT</a>
-            <a href="#">RESUME</a>
-        </div>
-        <div class="text1">
-            <h1>I'm Alok,</h1>
-            <p>Frontend Developer | Building cool stuff with HTML, CSS, and JavaScript</p>
-        </div>
-        <div class="hero">
-            <img src="./images/profile.png" alt="I AM NOT AVILABLE" width="250" height="250">        </div>
-        </div>
-                <div class="hero-title">
-        <h1 class="my">We Create,</h1>
-        <h1 class="wokexp">Digital Experiences</h1>
-        </div>
-<div>
- <div style="max-width: 100%;height: auto; display: block;">
-            <img src="images/1.png" alt="I AM NOT AVILABLE"> 
-            <img src="images/2.png" alt="I AM NOT AVILABLE" >   
-            <img src="images/3.png" alt="I AM NOT AVILABLE" >
-            <img src="images/4.png" alt="I AM NOT AVILABLE" >
-            <img src="images/5.png" alt="I AM NOT AVILABLE" > 
-            <img src="images/6.png" alt="I AM NOT AVILABLE" >
-            <img src="images/7.png" alt="I AM NOT AVILABLE"> 
-            <img src="images/8.png" alt="I AM NOT AVILABLE" >    </div>
-        </div>
-        
-</body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#" class="active">HOME</a>
+    <a href="#">ABOUT ME</a>
+    <a href="#">PROJECTS</a>
+    <a href="#">CONTACT</a>
+    <a href="#">RESUME</a>
+  </div>
 
-</html>
+  <!-- Intro -->
+  <div class="text1">
+    <h1>I'm Alok,</h1>
+    <p>Frontend Developer | Building cool stuff with HTML, CSS, and JavaScript</p>
+  </div>
 
+  <!-- Hero -->
+  <div class="hero">
+    <img src="./images/profile.png" alt="Profile Picture">
+  </div>
+
+  <!-- Hero Title -->
+  <div class="hero-title"
